@@ -55,13 +55,14 @@ public:
 private:
     size_t size_;
     int* data;
-    int capacity;
+    size_t capacity;
 
     void relocation(){
         int *new_data = new int[this->size_ * 2];
         for (int i = 0; i < this->size_; i++) {
             new_data[i] = data[i];
         }
+        capacity = size_ * 2;
 //        delete []data;
         data = new_data;
     }
