@@ -8,6 +8,7 @@ public:
         capacity = size;
         data = new int[capacity];
     }
+    
 
     ~vector(){
         delete []data;
